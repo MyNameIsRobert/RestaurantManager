@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1488328965690586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4858913464248410}
+  - component: {fileID: 114451622240957578}
+  m_Layer: 0
+  m_Name: Cheese Sandwhich Recipe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4858913464248410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488328965690586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0162015, y: -2.1967735, z: -2.9318347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114451622240957578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488328965690586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaebf1e1f121fba4abfea21f49d5a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Cheese Sandwhich Recipe
+  itemDescription: A recipe for a simple sandwhich with only cheese
+  itemValue: 0
+  itemIcon: {fileID: 21300006, guid: 2c9e5669c94b364409c75430161f7c3b, type: 3}
+  itemSize: 1
+  itemType: 3
+  realWorldObject: {fileID: 0}
+  coreIngredients:
+  - {fileID: 114905248072796532, guid: 17ffa5b8000c6a340bcc622c8f5211ba, type: 3}
+  - {fileID: 114339702775590698, guid: 7b8c4cecd45aaaa4cab950ac6d60f748, type: 3}
+  - {fileID: 114905248072796532, guid: 17ffa5b8000c6a340bcc622c8f5211ba, type: 3}
+  foodCreated: {fileID: 4524922520578360351, guid: 660eb47ee3aca1941b9dcdbaa69aadc2,
+    type: 3}

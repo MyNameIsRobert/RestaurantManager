@@ -59,7 +59,6 @@ public class Ingredient : Item {
         Raw_Burnt,
         Frozen
     }
-
     public Ingredient(Ingredient o)
     {
         itemName = o.itemName;
@@ -80,6 +79,36 @@ public class Ingredient : Item {
         isBurnt = o.isBurnt;
         burnTempReachTime = o.burnTempReachTime;
         hasBeenCooked = o.hasBeenCooked;
+        if (realWorldObject)
+            realWorldObject = Instantiate(realWorldObject);
+        else
+            Debug.LogError(realWorldObject + " is null");
+    }
+    public Ingredient IngredientCopy(Ingredient o)
+    {
+        itemName = o.itemName;
+        itemDescription = o.itemDescription;
+        itemValue = o.itemValue;
+        itemIcon = o.itemIcon;
+        itemSize = o.itemSize;
+        itemType = o.itemType;
+        realWorldObject = o.realWorldObject;
+        preferredCookTime = o.preferredCookTime;
+        preferredCookTemp = o.preferredCookTemp;
+        burningTemp = o.burningTemp;
+        burnSeconds = o.burnSeconds;
+        cookingStyle = o.cookingStyle;
+        totalCurrentTemp = o.totalCurrentTemp;
+        sideOneTemp = o.sideOneTemp;
+        sideTwoTemp = o.sideTwoTemp;
+        isBurnt = o.isBurnt;
+        burnTempReachTime = o.burnTempReachTime;
+        hasBeenCooked = o.hasBeenCooked;
+        if (realWorldObject)
+            realWorldObject = Instantiate(realWorldObject);
+        else
+            Debug.LogError(realWorldObject + " is null");
+        return this;
     }
     IEnumerator UpdateMaterial()
     {

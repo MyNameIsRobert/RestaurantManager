@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 
     public CanvasGroup grill, register, staging, pickup;
 
+    public static bool uiRunning = true;
     public void GrillUI(bool on)
     {
         if (on)
@@ -15,12 +16,14 @@ public class UIManager : MonoBehaviour
             grill.alpha = 1;
         grill.blocksRaycasts = true;
         grill.interactable = true;
+            uiRunning = true;
         }
         else
         {
             grill.alpha = 0;
             grill.blocksRaycasts = false;
             grill.interactable = false;
+            uiRunning = false;
         }
     }
     public void ToggleRegisterUI()
@@ -41,5 +44,7 @@ public class UIManager : MonoBehaviour
         pickup.blocksRaycasts = !pickup.blocksRaycasts;
         pickup.interactable = !pickup.interactable;
     }
+
+    public void SetGrill(Grill g) => grill.GetComponent<GrillUI>().SetGrill(g);
 
 }

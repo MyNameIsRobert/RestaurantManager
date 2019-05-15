@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -21,14 +20,14 @@ public class Player : MonoBehaviour
         Vector3 vector = Vector3.zero;
         RaycastHit hit;
         Ray ray = new Ray(GetComponent<Camera>().transform.position, GetComponent<Camera>().transform.forward);
-        if(Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
             vector = hit.point;
         }
-        
+
         while (!Input.GetButtonUp("Alt Use"))
         {
-            
+
             transform.RotateAround(vector, new Vector3(0, Input.GetAxis("Mouse X"), 0), rotateSpeed * Time.deltaTime);
             yield return null;
         }
@@ -40,25 +39,28 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Use"))
         {
-            Vector3 vector = GetMousePositionOnPlane();
-            if (vector != Vector3.zero)
+            if (!UIManager.uiRunning)
             {
-                aiController.SetDestination(vector);
-                cube.transform.position = vector;
+                Vector3 vector = GetMousePositionOnPlane();
+                if (vector != Vector3.zero)
+                {
+                    aiController.SetDestination(vector);
+                    cube.transform.position = vector;
+                }
             }
         }
         transform.Translate(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"), 0);
-        if(Input.GetAxis("Scrollwheel") != 0)
+        if (Input.GetAxis("Scrollwheel") != 0)
         {
             Camera cam = GetComponent<Camera>();
- //           if(cam.orthographicSize >= 1 && cam.orthographicSize <= 10)
-                cam.orthographicSize += Input.GetAxis("Scrollwheel") * scrollSpeed;
+            //           if(cam.orthographicSize >= 1 && cam.orthographicSize <= 10)
+            cam.orthographicSize += Input.GetAxis("Scrollwheel") * scrollSpeed;
         }
-        if(Input.GetButtonDown("Alt Use"))
+        if (Input.GetButtonDown("Alt Use"))
         {
             StartCoroutine(RotateCamera());
         }
-        
+
     }
 
     public Vector3 GetMousePositionOnPlane()
@@ -68,9 +70,18 @@ public class Player : MonoBehaviour
         Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            
+
             hitpoint = hit.point;
-            if(hit.collider.GetComponent<NavMeshObstacle>())
+            if (hit.collider.GetComponent<NavMeshObstacle>())
+            {
+                if (hit.collider.GetComponent<Station>())
+                {
+                    Station station = hit.collider.GetComponent<Station>();
+                    hitpoint = station.employeeConnectionCube.transform.position;
+
+                }
+            }
+            else if(hit.collider.gameObject.layer == 5)
             {
                 hitpoint = Vector3.zero;
             }

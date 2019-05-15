@@ -892,8 +892,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 256849493}
   m_HandleRect: {fileID: 256849492}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.8983353
+  m_Value: 0.9999995
+  m_Size: 0.7329075
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1693,13 +1693,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 91944440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0c3c405cb79fc4988ffca7629ef8bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f23da01d79778645b7082cc45874842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1975576810}
-  moveSpeed: 4
-  scrollSpeed: 2
-  rotateSpeed: 180
+  moveSpeed: 1
+  scrollSpeed: 1
+  rotateSpeed: 45
   cube: {fileID: 1491751472}
 --- !u!1 &99619521
 GameObject:
@@ -2425,8 +2425,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1789153289}
   m_HandleRect: {fileID: 1789153288}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999995
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4524,9 +4524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75c5ed853ab0bc428b18ba999946a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultIngredientDisplay: {fileID: 4576811377560119712, guid: cc7aceb43cfc03546b6d7dc37921516f,
-    type: 3}
-  contentHolster: {fileID: 0}
 --- !u!114 &354198496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5144,19 +5141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835cd520601111342b937771d4c61f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ticketContainers:
-  - {fileID: 1759485361}
-  - {fileID: 839914599}
-  - {fileID: 1065905455}
-  playerInventoryHolder: {fileID: 12687689}
-  itemButton: {fileID: 4207611522127560217, guid: 6fe37d041d4f98749b40aad384d0e73e,
-    type: 3}
-  player: {fileID: 0}
-  draggedItem_Transform: {fileID: 0}
-  draggedItem_Item: {fileID: 0}
-  lastTicketIndex: -1
-  draggedItem_Index: -1
-  canvas: {fileID: 0}
 --- !u!1 &419047549
 GameObject:
   m_ObjectHideFlags: 0
@@ -5773,7 +5757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.2, y: -24.6}
+  m_AnchoredPosition: {x: 104.20001, y: -24.600006}
   m_SizeDelta: {x: 175, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476235544
@@ -5962,10 +5946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c5ffa9b954af54c96969b49f14a260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grill: {fileID: 1061026550}
-  register: {fileID: 0}
-  staging: {fileID: 0}
-  pickup: {fileID: 0}
 --- !u!1 &484672819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6070,11 +6050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2f2f9795d88394993d0a38513aadea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMoney: {fileID: 2080662348}
-  averageFoodRevenue: {fileID: 1844416527}
-  averageTicketProfit: {fileID: 1844416527}
-  averageItemCost: {fileID: 785800528}
-  financeManager: {fileID: 1920811562}
 --- !u!1 &489295553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6569,12 +6544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 256db90db1984d7488bee55be1850aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 0}
-  pickup: {fileID: 0}
-  dropdown: {fileID: 1230153519}
-  foodOrder: {fileID: 175305891}
-  totalTicketCost: {fileID: 1899261861}
-  ticketName: {fileID: 1273330464}
 --- !u!1 &543675004
 GameObject:
   m_ObjectHideFlags: 0
@@ -6627,20 +6596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d07a7f4bac7694d8964abce9b0d3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipeContainers:
-  - {fileID: 1642603360}
-  - {fileID: 279453639}
-  - {fileID: 1489264459}
-  playerInventoryHolder: {fileID: 1560490151}
-  allRecipeHolder: {fileID: 1153073360}
-  itemButton: {fileID: 51987561485598263, guid: aae3100ade3216047800d73c868fed34,
-    type: 3}
-  player: {fileID: 0}
-  draggedItem_Transform: {fileID: 0}
-  draggedItem_Item: {fileID: 0}
-  lastTicketIndex: -1
-  draggedItem_Index: -1
-  canvas: {fileID: 0}
 --- !u!114 &543675008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8426,25 +8381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03832c6ea4bbac548ac15a8bf12fc52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  editorCam: {fileID: 91944443}
-  currentHeldObject: {fileID: 0}
-  currentGrid:
-    position: {x: 0, y: 0, z: 0}
-    isWalkable: 0
-    dirtiness: 0
-    isEmptySpace: 0
-    gridIndex_Location: {x: 0, y: 0, z: 0}
-  lmanager: {fileID: 1273342010}
-  playerCam: {fileID: 0}
-  playerController: {fileID: 0}
-  editing: 0
-  emptyOccupant: {fileID: 6988569195525896050, guid: 5e115c172f7ec9e4ab8a73e320da5435,
-    type: 3}
-  emptyOccupant_GarbageObject: {fileID: 0}
-  selectionCube: {fileID: 0}
-  selectedNode_GarbageObject: {fileID: 0}
-  currentHeight: 0
-  previousHeight: -1
 --- !u!1 &669170097
 GameObject:
   m_ObjectHideFlags: 0
@@ -9250,6 +9186,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737463815}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &739021759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739021760}
+  - component: {fileID: 739021762}
+  - component: {fileID: 739021761}
+  m_Layer: 5
+  m_Name: Grill Storage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &739021760
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739021759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000037352}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1061026553}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -212.5}
+  m_SizeDelta: {x: 750, y: 75}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &739021761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739021759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9716981, g: 0.648189, b: 0.46293163, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &739021762
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739021759}
+  m_CullTransparentMesh: 0
 --- !u!1 &740406601
 GameObject:
   m_ObjectHideFlags: 0
@@ -9394,7 +9404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 5.6, y: 0}
+  m_AnchoredPosition: {x: 5.6000004, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746366567
@@ -9528,9 +9538,9 @@ Canvas:
   m_GameObject: {fileID: 746738011}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 91944443}
+  m_PlaneDistance: 2
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -9561,10 +9571,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 746738011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7548a023c958f7d499c9ca56a8b81702, type: 3}
+  m_Script: {fileID: 11500000, guid: 963456119f2ea494f952926fb5c7dbcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restaurantOverview: {fileID: 484672821}
+  grill: {fileID: 1061026550}
+  register: {fileID: 0}
+  staging: {fileID: 0}
+  pickup: {fileID: 0}
 --- !u!1 &764994563
 GameObject:
   m_ObjectHideFlags: 0
@@ -11944,6 +11957,7 @@ GameObject:
   - component: {fileID: 1061026552}
   - component: {fileID: 1061026551}
   - component: {fileID: 1061026550}
+  - component: {fileID: 1061026554}
   m_Layer: 5
   m_Name: Grill
   m_TagString: Untagged
@@ -12014,6 +12028,7 @@ RectTransform:
   - {fileID: 2140839495}
   - {fileID: 595808311}
   - {fileID: 1162326577}
+  - {fileID: 739021760}
   m_Father: {fileID: 746738012}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12022,6 +12037,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 750, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1061026554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061026549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60574dd43e40a04cb26dc5f74dd6aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grillStorage: {fileID: 739021759}
+  ingredientSlotsParent: {fileID: 595808310}
+  grillStorage_Slot: {fileID: 6128723540050799704, guid: 5dc293bdbab18814a87a865aa0be19f4,
+    type: 3}
+  ingredient_Slot: {fileID: 8661446953630882970, guid: cf8121906590aaa41a7f3da074cdb8e6,
+    type: 3}
 --- !u!1 &1062367767
 GameObject:
   m_ObjectHideFlags: 0
@@ -13427,7 +13460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16.98, y: -18.23}
+  m_AnchoredPosition: {x: -16.980011, y: -18.229996}
   m_SizeDelta: {x: 31.54, y: 36.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1162326578
@@ -13475,7 +13508,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1162326579}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 746738011}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1162326579
@@ -13533,7 +13577,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 480330299}
+        - m_Target: {fileID: 746738017}
           m_MethodName: GrillUI
           m_Mode: 6
           m_Arguments:
@@ -15997,11 +16041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229a07b541f363c4bb5a1fe6df5fe148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMoney: {fileID: 225571333}
-  currentTime: {fileID: 1824727978}
-  fmanager: {fileID: 0}
-  manager: {fileID: 0}
-  tmanager: {fileID: 2111014299}
 --- !u!114 &1393128076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18620,6 +18659,7 @@ GameObject:
   - component: {fileID: 1649160767}
   - component: {fileID: 1649160766}
   - component: {fileID: 1649160765}
+  - component: {fileID: 1649160768}
   m_Layer: 0
   m_Name: Character Connection Cube
   m_TagString: Untagged
@@ -18700,6 +18740,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649160763}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1649160768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649160763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69aee25eb7136c046a9dc87f943bd9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationType: 0
 --- !u!1 &1655799876
 GameObject:
   m_ObjectHideFlags: 0
@@ -18997,7 +19050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 102.999985, y: -222}
+  m_AnchoredPosition: {x: 103, y: -222}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662424804
@@ -22104,7 +22157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.7, y: -16.4}
+  m_AnchoredPosition: {x: -33.699997, y: -16.400002}
   m_SizeDelta: {x: 50, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899261861
@@ -23925,7 +23978,7 @@ GameObject:
   - component: {fileID: 2051633688}
   - component: {fileID: 2051633689}
   m_Layer: 0
-  m_Name: Stove
+  m_Name: Grill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24031,9 +24084,18 @@ MonoBehaviour:
   employeeConnectionCube: {fileID: 0}
   customerConnectionCube: {fileID: 0}
   stoveTop: {fileID: 768209070}
+  grillStorage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   grillTemperature: 800
   chefConnected: 0
-  extraSlots: []
   ingredientSlots:
   - {fileID: 1939869721}
   - {fileID: 2052829489}
@@ -24046,6 +24108,8 @@ MonoBehaviour:
   - {fileID: 0}
   firstSide: 00000000
   timerText: []
+  itemToSpawn: {fileID: 114431882897238534, guid: 437fe834f1974f04eaee1853c217f3e4,
+    type: 3}
 --- !u!208 &2051633688
 NavMeshObstacle:
   m_ObjectHideFlags: 0

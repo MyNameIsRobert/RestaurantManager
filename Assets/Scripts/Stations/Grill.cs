@@ -8,50 +8,15 @@ public class Grill : Station {
 
     public GameObject stoveTop;
     UIManager uiManager;
-    public List<Ingredient[]> extraIngredientStorages = new List<Ingredient[]>();
 
+    public List<Ingredient> grillStorage = new List<Ingredient>();
     public int grillTemperature = 400;
 
     //[HideInInspector]
     public bool chefConnected = false;
     public delegate void OnSideCooked();
     public List<OnSideCooked> sidesCooked = new List<OnSideCooked>();
-    [System.Serializable]
-    public class ExtraIngredientSlot
-    {
-        public GameObject realWorldObject;
-        public int numOfSpace = 30;
-        public List<Ingredient> heldIngredients;
-
-        ExtraIngredientSlot()
-        {
-            numOfSpace = 30;
-            heldIngredients = new List<Ingredient>();
-        }
-
-        public bool AddIngredient(Ingredient ingredient)
-        {
-            if(ingredient.itemSize + CalculateSpace() > numOfSpace)
-            {
-                return false;
-            }
-            else
-            {
-                heldIngredients.Add(ingredient);
-                return true;
-            }
-        }
-        public int CalculateSpace()
-        {
-            int size = 0;
-            foreach(Ingredient i in heldIngredients)
-            {
-                size += i.itemSize;
-            }
-            return size;
-        }
-    }
-    public ExtraIngredientSlot[] extraSlots;
+    
 
     //Where on the grill ingredients can be placed.
     [Tooltip("NOTE: This is how you change how many ingredients can be cooked at once. It's always the same amount as the number of ingredient slots")]
@@ -61,7 +26,7 @@ public class Grill : Station {
     public Text[] timerText;
     Coroutine[] timerRoutines;
     StoveUIController uiController;
-
+    public Ingredient itemToSpawn;
     IEnumerator StartTimer(int index)
     {
         Text text = timerText[index];
@@ -78,6 +43,19 @@ public class Grill : Station {
     {
 
     }
+
+    void FillStorageSlots()
+    {
+        for(int i = 0; i < grillStorage.Capacity; i++)
+        {
+            Ingredient item = new Ingredient(itemToSpawn);
+            item.realWorldObject.transform.SetParent(gameObject.transform);
+            item.realWorldObject.transform.localPosition = Vector3.zero;
+            Debug.Log(item);
+            grillStorage.Add(item.realWorldObject.GetComponent<Ingredient>());
+        }
+    }
+
     private void Start()
     {
         foreach(Ingredient i in ingredients)
@@ -97,6 +75,11 @@ public class Grill : Station {
         }
         uiController = GetComponentInChildren<StoveUIController>();
         uiManager = FindObjectOfType<UIManager>();
+        if(grillStorage.Capacity < 9)
+        {
+            grillStorage.Capacity = 9;
+        }
+        FillStorageSlots();
     }
     // Update is called once per frame
     void Update ()
@@ -215,6 +198,7 @@ public class Grill : Station {
         if(other.CompareTag("Player"))
         {
             uiManager.GrillUI(true);
+            uiManager.SetGrill(this);
         }
     }
     private void OnTriggerExit(Collider other)
